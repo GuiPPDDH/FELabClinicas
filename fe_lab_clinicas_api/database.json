@@ -4,6 +4,11 @@
             "id": "4cb815d0-2a67-1e8a-89c8-0336024ddadb",
             "email": "at1@gmail.com",
             "password": "123456"
+        },
+        {
+            "id": "30df2ff0-58e5-1e9d-a23e-99e7832fb306",
+            "email": "at1@gmail.com",
+            "password": "123456"
         }
     ],
     "adm_users": [
