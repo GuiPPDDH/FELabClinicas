@@ -8,6 +8,6 @@ class HomeModule extends FlutterGetItModule {
 
   @override
   Map<String, WidgetBuilder> get pages => {
-    '/':(_) => const HomePage(),
+    '/':(context) => const HomePage(),
   };
 }

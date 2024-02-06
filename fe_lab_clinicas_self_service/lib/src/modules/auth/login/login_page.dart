@@ -21,11 +21,13 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
   @override
   void initState() {
     messageListener(controller);
+
     effect(() {
       if (controller.logged) {
         Navigator.of(context).pushReplacementNamed('/home');
       }
     });
+    
     super.initState();
   }
 
