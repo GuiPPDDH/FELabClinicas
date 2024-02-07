@@ -14,7 +14,7 @@ enum FormSteps {
 
 class SelfServiceController with MessageStateMixin {
   final _steps = ValueSignal(FormSteps.none);
-  var _model = SelfServiceModel();
+  var _model = const SelfServiceModel();
 
   FormSteps get step => _steps();
 
@@ -29,5 +29,9 @@ class SelfServiceController with MessageStateMixin {
     );
 
     _steps.forceUpdate(FormSteps.findPatient);
+  }
+
+  void clearForm() {
+    _model = _model.clear();
   }
 }
