@@ -34,8 +34,15 @@ class FindPatientController with MessageStateMixin {
     }
 
     batch(() {
-      _patient.forceUpdate(patient);
+      _patient.value = patient;
       _patientNotFound.forceUpdate(patientNotFound);
+    });
+  }
+
+  void continueWithoutDocument() {
+    batch(() {
+      _patient.value = null;
+      _patientNotFound.forceUpdate(true);
     });
   }
 }

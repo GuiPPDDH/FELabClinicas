@@ -1,4 +1,5 @@
 import 'package:fe_lab_clinicas_core/fe_lab_clinicas_core.dart';
+import 'package:fe_lab_clinicas_self_service/src/model/patient_model.dart';
 import 'package:fe_lab_clinicas_self_service/src/model/self_service_model.dart';
 import 'package:signals_flutter/signals_flutter.dart';
 
@@ -13,13 +14,13 @@ enum FormSteps {
 }
 
 class SelfServiceController with MessageStateMixin {
-  final _steps = ValueSignal(FormSteps.none);
+  final _step = ValueSignal(FormSteps.none);
   var _model = const SelfServiceModel();
 
-  FormSteps get step => _steps();
+  FormSteps get step => _step();
 
   void startProcess() {
-    _steps.forceUpdate(FormSteps.whoIAm);
+    _step.forceUpdate(FormSteps.whoIAm);
   }
 
   void setWhoIAmDataStepAndNext(String name, String lastName) {
@@ -28,10 +29,22 @@ class SelfServiceController with MessageStateMixin {
       lastName: () => lastName,
     );
 
-    _steps.forceUpdate(FormSteps.findPatient);
+    _step.forceUpdate(FormSteps.findPatient);
+  }
+
+  void goToFormPatient(PatientModel? patient) {
+    _model = _model.copyWith(
+      patient: () => patient,
+    );
+    _step.forceUpdate(FormSteps.patient);
   }
 
   void clearForm() {
     _model = _model.clear();
+  }
+
+  void restartProcess() {
+    _step.forceUpdate(FormSteps.restart);
+    clearForm();
   }
 }
