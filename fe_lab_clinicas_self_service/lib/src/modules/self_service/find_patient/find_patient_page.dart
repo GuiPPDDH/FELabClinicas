@@ -1,6 +1,7 @@
 import 'package:fe_lab_clinicas_core/fe_lab_clinicas_core.dart';
 import 'package:fe_lab_clinicas_self_service/src/modules/self_service/find_patient/find_patient_controller.dart';
 import 'package:fe_lab_clinicas_self_service/src/modules/self_service/self_service_controller.dart';
+import 'package:fe_lab_clinicas_self_service/src/modules/self_service/widgets/lab_clinicas_self_service_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_getit/flutter_getit.dart';
@@ -38,24 +39,7 @@ class _FindPatientPageState extends State<FindPatientPage> with MessageViewMixin
     final sizeOf = MediaQuery.sizeOf(context);
 
     return Scaffold(
-      appBar: LabClinicasAppBar(
-        actions: [
-          PopupMenuButton(
-            itemBuilder: (context) {
-              return [
-                const PopupMenuItem(
-                  value: 1,
-                  child: Text('Reiniciar Processo'),
-                ),
-              ];
-            },
-            onSelected: (value) async {
-              Injector.get<SelfServiceController>().restartProcess();
-            },
-            child: const IconPopupMenuWidget(),
-          ),
-        ],
-      ),
+      appBar: LabClinicasSelfServiceAppBar(),
       body: LayoutBuilder(
         builder: (BuildContext _, BoxConstraints constraints) {
           return SingleChildScrollView(

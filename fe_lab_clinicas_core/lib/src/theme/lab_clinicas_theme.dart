@@ -37,6 +37,23 @@ final class LabClinicasTheme {
         ),
       ),
     ),
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        backgroundColor: Colors.white,
+        side: const BorderSide(
+          color: blueColor,
+        ),
+        foregroundColor: blueColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+        textStyle: const TextStyle(
+          fontFamily: 'Montserrat',
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         foregroundColor: Colors.white,
