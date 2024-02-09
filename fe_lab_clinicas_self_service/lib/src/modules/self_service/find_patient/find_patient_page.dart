@@ -1,5 +1,7 @@
 import 'package:fe_lab_clinicas_core/fe_lab_clinicas_core.dart';
+import 'package:fe_lab_clinicas_self_service/src/modules/self_service/find_patient/find_patient_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_getit/flutter_getit.dart';
 import 'package:validatorless/validatorless.dart';
 
 class FindPatientPage extends StatefulWidget {
@@ -9,9 +11,16 @@ class FindPatientPage extends StatefulWidget {
   State<FindPatientPage> createState() => _FindPatientPageState();
 }
 
-class _FindPatientPageState extends State<FindPatientPage> {
+class _FindPatientPageState extends State<FindPatientPage> with MessageViewMixin {
   final formKey = GlobalKey<FormState>();
   final documentEC = TextEditingController();
+  final controller = Injector.get<FindPatientController>();
+
+  @override
+  void initState() {
+    messageListener(controller);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
