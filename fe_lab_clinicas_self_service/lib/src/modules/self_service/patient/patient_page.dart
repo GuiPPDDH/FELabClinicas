@@ -289,8 +289,11 @@ class _PatientPageState extends State<PatientPage> with PatientFormController, M
                         onPressed: () {
                           final valid = formKey.currentState?.validate() ?? false;
                           if (valid) {
-                            controller
-                                .updateAndNext(updatePatient(selfServiceController.model.patient!));
+                            controller.updateAndNext(
+                              updatePatient(selfServiceController.model.patient!),
+                            );
+                          } else {
+                            controller.saveAndNext(createPatientRegister());
                           }
                         },
                         child: Visibility(

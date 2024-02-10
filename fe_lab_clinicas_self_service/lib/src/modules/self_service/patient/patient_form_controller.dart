@@ -1,5 +1,6 @@
 import 'package:fe_lab_clinicas_self_service/src/model/patient_model.dart';
 import 'package:fe_lab_clinicas_self_service/src/modules/self_service/patient/patient_page.dart';
+import 'package:fe_lab_clinicas_self_service/src/repositories/patient/patient_repository.dart';
 import 'package:flutter/material.dart';
 
 mixin PatientFormController on State<PatientPage> {
@@ -51,12 +52,32 @@ mixin PatientFormController on State<PatientPage> {
     }
   }
 
+  RegisterPatientModel createPatientRegister() {
+    return (
+      name: nameEC.text,
+      email: emailEC.text,
+      phoneNumber: phoneEC.text,
+      document: documentEC.text,
+      address: (
+        cep: cepEC.text,
+        streetAddress: streetEC.text,
+        number: numberEC.text,
+        addressComplement: complementEC.text,
+        state: stateEC.text,
+        city: cityEC.text,
+        district: districtEC.text,
+      ),
+      guardian: guardianEC.text,
+      guardianIdentificationNumber: guardianIdentificationNumberEC.text,
+    );
+  }
+
   PatientModel updatePatient(PatientModel patientModel) {
     return patientModel.copyWith(
       name: nameEC.text,
       email: emailEC.text,
-      phoneNumber: nameEC.text,
-      document: nameEC.text,
+      phoneNumber: phoneEC.text,
+      document: documentEC.text,
       address: patientModel.address.copyWith(
         cep: cepEC.text,
         streetAddress: streetEC.text,
