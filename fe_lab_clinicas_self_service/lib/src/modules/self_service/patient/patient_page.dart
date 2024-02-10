@@ -322,7 +322,10 @@ class _PatientPageState extends State<PatientPage> with PatientFormController, M
                           child: SizedBox(
                             height: 48,
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                controller.patient = selfServiceController.model.patient;
+                                controller.goNextStep();
+                              },
                               child: const Text('CONTINUAR'),
                             ),
                           ),
