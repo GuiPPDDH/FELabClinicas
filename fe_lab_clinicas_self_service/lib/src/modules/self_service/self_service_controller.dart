@@ -55,4 +55,23 @@ class SelfServiceController with MessageStateMixin {
     );
     _step.forceUpdate(FormSteps.documents);
   }
+
+  void registerDocument(DocumentType documentType, String filePath) {
+    final documents = _model.documents ?? {};
+
+    if (documentType == DocumentType.healthInsuranceCard) {
+      documents[documentType]?.clear();
+    }
+
+    final values = documents[documentType] ?? [];
+    values.add(filePath);
+    documents[documentType] = values;
+    _model = _model.copyWith(
+      documents: () => documents,
+    );
+  }
+
+  void clearDocuments() {
+    _model = _model.copyWith(documents: () => {},);
+  }
 }
