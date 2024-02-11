@@ -6,6 +6,7 @@ import 'package:fe_lab_clinicas_self_service/src/binding/lab_clinicas_applicatio
 import 'package:fe_lab_clinicas_self_service/src/modules/auth/auth_module.dart';
 import 'package:fe_lab_clinicas_self_service/src/modules/home/home_module.dart';
 import 'package:fe_lab_clinicas_self_service/src/modules/self_service/documents/documents_page.dart';
+import 'package:fe_lab_clinicas_self_service/src/modules/self_service/documents/scan/scan_page.dart';
 import 'package:fe_lab_clinicas_self_service/src/modules/self_service/self_service_module.dart';
 import 'package:fe_lab_clinicas_self_service/src/pages/splash_page/splash_page.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +35,7 @@ class LabClinicasSelfServiceApp extends StatelessWidget {
       applicationBindings: LabClinicasApplicationBinding(),
       pagesBuilders: [
         FlutterGetItPageBuilder(
-          page: (_) => const DocumentsPage(),
+          page: (_) => const ScanPage(),
           path: '/',
         ),
       ],
