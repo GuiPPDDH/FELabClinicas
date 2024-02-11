@@ -20,11 +20,12 @@ class _FindPatientPageState extends State<FindPatientPage> with MessageViewMixin
   final formKey = GlobalKey<FormState>();
   final documentEC = TextEditingController();
   final controller = Injector.get<FindPatientController>();
+  late final EffectCleanup effectFindPatient;
 
   @override
   void initState() {
     messageListener(controller);
-    effect(() {
+    effectFindPatient = effect(() {
       final FindPatientController(:patient, :patientNotFound) = controller;
 
       if (patient != null || patientNotFound != null) {
@@ -32,6 +33,12 @@ class _FindPatientPageState extends State<FindPatientPage> with MessageViewMixin
       }
     });
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    
+    super.dispose();
   }
 
   @override
