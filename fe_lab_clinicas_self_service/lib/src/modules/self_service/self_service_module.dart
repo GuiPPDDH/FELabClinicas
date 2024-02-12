@@ -1,5 +1,6 @@
 import 'package:fe_lab_clinicas_self_service/src/modules/self_service/documents/documents_page.dart';
 import 'package:fe_lab_clinicas_self_service/src/modules/self_service/documents/scan/scan_page.dart';
+import 'package:fe_lab_clinicas_self_service/src/modules/self_service/documents/scan_confirm/scan_confirm_router.dart';
 import 'package:fe_lab_clinicas_self_service/src/modules/self_service/done/done_page.dart';
 import 'package:fe_lab_clinicas_self_service/src/modules/self_service/find_patient/find_patient_router.dart';
 import 'package:fe_lab_clinicas_self_service/src/modules/self_service/patient/patient_router.dart';
@@ -31,7 +32,7 @@ class SelfServiceModule extends FlutterGetItModule {
         '/patient': (context) => const PatientRouter(),
         '/documents': (context) => const DocumentsPage(),
         '/documents/scan': (context) => const ScanPage(),
-        '/documents/scan/confirm': (context) => const ScanPage(),
+        '/documents/scan/confirm': (context) => const ScanConfirmRouter(),
         '/done': (context) => const DonePage(),
       };
 }

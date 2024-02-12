@@ -1,3 +1,4 @@
+import 'package:asyncstate/asyncstate.dart';
 import 'package:camera/camera.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:fe_lab_clinicas_core/fe_lab_clinicas_core.dart';
@@ -118,7 +119,12 @@ class _ScanPageState extends State<ScanPage> {
                 SizedBox(
                   width: sizeOf.width * 0.8,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () async {
+                      final navigator = Navigator.of(context);
+                      final foto = await cameraController.takePicture().asyncLoader();
+                      
+                      navigator.pushNamed('/self-service/documents/scan/confirm', arguments: foto);
+                    },
                     child: const Text('TIRAR FOTO'),
                   ),
                 ),
