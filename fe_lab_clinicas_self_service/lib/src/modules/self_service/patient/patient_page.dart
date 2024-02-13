@@ -208,7 +208,7 @@ class _PatientPageState extends State<PatientPage> with PatientFormController, M
                     ],
                   ),
                   const SizedBox(
-                    width: 16,
+                    height: 16,
                   ),
                   Row(
                     children: [
@@ -232,6 +232,9 @@ class _PatientPageState extends State<PatientPage> with PatientFormController, M
                       ),
                     ],
                   ),
+                  const SizedBox(
+                    height: 16,
+                  ),
                   Row(
                     children: [
                       Expanded(
@@ -243,7 +246,7 @@ class _PatientPageState extends State<PatientPage> with PatientFormController, M
                         ),
                       ),
                       const SizedBox(
-                        height: 16,
+                        width: 16,
                       ),
                       Expanded(
                         child: TextFormField(

@@ -117,6 +117,9 @@ class _WhoIAmPageState extends State<WhoIAmPage> {
                               label: Text('Digite seu sobrenome'),
                             ),
                           ),
+                          const SizedBox(
+                             height: 24,
+                          ),
                           SizedBox(
                             width: sizeOf.width * 0.8,
                             height: 48,
