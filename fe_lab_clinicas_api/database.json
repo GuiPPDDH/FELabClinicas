@@ -16,6 +16,11 @@
             "id": "f28d3cd0-2a97-1e8a-89c8-0336024ddadb",
             "email": "terminal1@gmail.com",
             "password": "123123"
+        },
+        {
+            "id": "fc491b90-c680-1eb4-b816-13dd4a595695",
+            "email": "guiadm@academiadoflutter.com",
+            "password": "123123"
         }
     ],
     "attendantDeskAssignment": [],
@@ -34,6 +39,24 @@
                 "state": "SP",
                 "city": "Santo André",
                 "district": "Jardins"
+            },
+            "guardian": "",
+            "guardian_identification_number": ""
+        },
+        {
+            "id": "UUID_XXXXXXX_XXXX",
+            "name": "Guilherme Potter Petry",
+            "email": "guilherme@academiadoflutter.com.br",
+            "phone_number": "(11) 1234567890",
+            "document": "123.123.123-12",
+            "address": {
+                "cep": "00000000",
+                "street_address": "Rua X",
+                "number": "00",
+                "address_complement": "casa",
+                "state": "RS",
+                "city": "Cidade tal",
+                "district": "Bairro tal"
             },
             "guardian": "",
             "guardian_identification_number": ""

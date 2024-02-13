@@ -12,8 +12,11 @@ final class AuthInterceptors extends Interceptor {
     if (extra case {'DIO_AUTH_KEY': true}) {
       final sharedPreferences = await SharedPreferences.getInstance();
       headers.addAll(
-        {authHeaderKey: 'Bearer ${sharedPreferences.getString(LocalStoragesConstants.accessToken)}'},
+        {
+          authHeaderKey: 'Bearer ${sharedPreferences.getString(LocalStoragesConstants.accessToken)}'
+        },
       );
     }
+    handler.next(options);
   }
 }
