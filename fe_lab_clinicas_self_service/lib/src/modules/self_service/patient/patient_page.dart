@@ -197,10 +197,10 @@ class _PatientPageState extends State<PatientPage> with PatientFormController, M
                         child: TextFormField(
                           readOnly: !enableForm,
                           controller: numberEC,
+                          maxLength: 3,
                           validator: Validatorless.required('Número obrigatório'),
                           inputFormatters: [
                             FilteringTextInputFormatter.digitsOnly,
-                            TelefoneInputFormatter(),
                           ],
                           decoration: const InputDecoration(label: Text('Número')),
                         ),
