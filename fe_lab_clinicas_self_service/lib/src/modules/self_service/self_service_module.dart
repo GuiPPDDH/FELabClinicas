@@ -17,7 +17,9 @@ import 'package:flutter_getit/flutter_getit.dart';
 class SelfServiceModule extends FlutterGetItModule {
   @override
   List<Bind<Object>> get bindings => [
-        Bind.lazySingleton((i) => SelfServiceController()),
+        Bind.lazySingleton(
+          (i) => SelfServiceController(informationFormRepository: i()),
+        ),
         Bind.lazySingleton<PatientRepository>(
           (i) => PatientRepositoryImpl(restClient: i()),
         ),
@@ -38,6 +40,6 @@ class SelfServiceModule extends FlutterGetItModule {
         '/documents': (context) => const DocumentsPage(),
         '/documents/scan': (context) => const ScanPage(),
         '/documents/scan/confirm': (context) => const ScanConfirmRouter(),
-        '/done': (context) => const DonePage(),
+        '/done': (context) => DonePage(),
       };
 }

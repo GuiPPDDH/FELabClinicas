@@ -45,9 +45,6 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
     final sizeOf = MediaQuery.sizeOf(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login Page'),
-      ),
       body: SingleChildScrollView(
         child: Container(
           constraints: BoxConstraints(
