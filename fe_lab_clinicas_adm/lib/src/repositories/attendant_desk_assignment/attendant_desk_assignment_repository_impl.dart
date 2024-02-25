@@ -21,7 +21,7 @@ class AttendantDeskAssignmentRepositoryImpl
       case Right():
         await restClient.auth.post(
           '/attendantDeskAssignment',
-          queryParameters: {
+          data: {
             'user_id': '#userAuthRef',
             'desk_number': deskNumber,
             'date_created': DateTime.now().toIso8601String(),
