@@ -60,42 +60,6 @@
             },
             "guardian": "Algum responsável",
             "guardian_identification_number": "987.654.321-00"
-        },
-        {
-            "id": "fb6bd770-2e0e-1ebb-b27e-2352667959cc",
-            "name": "",
-            "email": "",
-            "phone_number": "",
-            "document": "",
-            "address": {
-                "cep": "",
-                "street_address": "",
-                "number": "",
-                "address_complement": "",
-                "state": "",
-                "city": "",
-                "district": ""
-            },
-            "guardian": "",
-            "guardian_identification_number": ""
-        },
-        {
-            "id": "37db0670-2e25-1ebb-b27e-2352667959cc",
-            "name": "",
-            "email": "",
-            "phone_number": "",
-            "document": "",
-            "address": {
-                "cep": "",
-                "street_address": "",
-                "number": "",
-                "address_complement": "",
-                "state": "",
-                "city": "",
-                "district": ""
-            },
-            "guardian": "",
-            "guardian_identification_number": ""
         }
     ],
     "patientInformationForm": [
@@ -108,19 +72,6 @@
             ],
             "password": "Guilherme Potter Petry",
             "date_created": "2024-02-15T17:35:55.104541",
-            "status": "Waiting",
-            "tests": []
-        },
-        {
-            "id": "e30ab6e0-23e3-1ebb-b27e-2352667959cc",
-            "patient_id": "UUID_XXXXXXX_XXXX",
-            "health_insurance_card": "/storage/pmythigd_jrs_1708018956715.jpg",
-            "medical_order": [
-                "/storage/vehnkgzc_jrs_1708018963182.jpg",
-                "/storage/cuzhoqgi_jrs_1708018969014.jpg"
-            ],
-            "password": "Guilheme De novo",
-            "date_created": "2024-02-15T17:42:52.922956",
             "status": "Waiting",
             "tests": []
         }
