@@ -25,10 +25,10 @@
     ],
     "attendantDeskAssignment": [
         {
-            "id": "66e234c0-0977-1ed9-9b9d-39ff7ac432d9",
+            "id": "780bb580-6be1-1edc-820b-5d2e3bfa46f4",
             "user_id": "4cb815d0-2a67-1e8a-89c8-0336024ddadb",
             "desk_number": 1,
-            "date_created": "2024-02-25T08:28:13.087773",
+            "date_created": "2024-02-26T10:55:56.383378",
             "status": "Available"
         }
     ],
@@ -84,7 +84,14 @@
             "tests": []
         }
     ],
-    "painelCheckin": [],
+    "painelCheckin": [
+        {
+            "id": "1ababe20-6be2-1edc-820b-5d2e3bfa46f4",
+            "password": "Guilherme Potter Petry",
+            "date_time": "2024-02-26T10:55:56.669009",
+            "attendant_desk": 1
+        }
+    ],
     "tests": [
         {
             "id": "3b2526a7-96ad-4884-8d89-aac3a8f8d1e1",
